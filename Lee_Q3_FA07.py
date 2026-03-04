@@ -1,14 +1,20 @@
-friends = []
-for i in range(3):
-    print(f"Friend {i + 1}")
-    s = {}
-    s["name"] = input("Enter name: ")
-    s["age"] = int(input("Enter age: "))
-    s["grade"] = input("Enter grade: ")
-    friends.append(s)
+    [5300, 6200, 7000, 6500, 7200],  
+    [4500, 5800, 6000, 6100, 6900],  
+    [7000, 7500, 8000, 7800, 8200]   
 
-print("Class Directory:")
-for s in friends:
-    print(f"{s['name']} | Age: {s['age']} | Grade: {s['grade']}")
+print("Daily Steps for Each Friend (Mon–Fri):")
+for i in range(len(steps)):
+    print(f"Friend {i+1}: {steps[i]}")
 
-# Using a 2D array made it easier to arrange the data into rows and columns, so each person’s information was clearly structured and readable. It helped me quickly calculate totals, averages, and determine the highest and lowest values by using loops and built-in functions. Printing the data was the easiest part for me. The most difficult part was making sure the data was organized and sorted properly.
+print()
+
+
+print("Totals and Averages:")
+for i in range(len(steps)):
+    total = sum(steps[i])
+    average = total / len(steps[i])
+    print(f"Friend {i+1} → Total: {total}, Average: {average:.2f}")
+
+print()
+
+# Using the array honestly made it way easier to look at all the step data because everything was already organized in rows and columns. I didn’t have to keep checking each number one by one since the loops handled most of it. The totals and averages were pretty simple to do, but finding the max value took me a bit longer since I had to check every number in the dataset. Overall it helped me understand the data better and it wasn’t as hard as I thought.
